@@ -7,7 +7,6 @@ package RPIS41.Neizvestny.wdad.learn.xml;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.Calendar;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -23,9 +22,33 @@ import org.xml.sax.SAXException;
  * @author Cyfralus
  */
 public class XmlTask {
-    public static void main(String[] args)
+    
+    private Document document;
+    private String path;
+    
+    public XmlTask()
+            throws ParserConfigurationException, IOException, SAXException
     {
+        this("RPIS41/Neizvestny/wdad/learn/xml/newXMLDocument.xml");
     }
+    
+    public XmlTask(String path) 
+            throws ParserConfigurationException, IOException, SAXException
+    {
+        this.path = path;
+        createDocument();
+    }
+    
+    private void createDocument()
+            throws ParserConfigurationException, IOException, SAXException
+    {
+        File xmlFile = new File(path);
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        document = dBuilder.parse(xmlFile);
+    }
+    
+    
     /*public double getBill(String street, int buildingNumber, int flatNumber)
     {
         

@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE housekeeper SYSTEM "housekeeper.dtd">
 <housekeeper>
-    <tariffs coldwater="0" hotwater="0" electricity="0" gas="0"/>
-        <building street="0" number="0" flatquantity="0">
-            <flat number="0" personquantity="0" area="0">
-                <registration month="0" year="0">
-                    <coldwater>0</coldwater>
-                    <hotwater>0</hotwater>
-                    <electricity>0</electricity>
-                    <gas></gas>
-                </registration> 
+    <tariffs coldwater="20" hotwater="45" electricity="23" gas="15"/>
+        <building street="Gastello" number="14" flatquantity="120">
+            <flat number="25" personquantity="3" area="30">
+                <registration month="5" year="2016">
+                    <coldwater>240</coldwater>
+                    <hotwater>150</hotwater>
+                    <electricity>587</electricity>
+                    <gas>378</gas>
+                </registration>
+                 <registration month="6" year="2016">
+                    <coldwater>248</coldwater>
+                    <hotwater>156</hotwater>
+                    <electricity>704</electricity>
+                    <gas>402</gas>
+                </registration>
+            </flat>
+            <flat number="48" personquantity="2" area="25">
+                <registration month="6" year="2016">
+                    <coldwater>589</coldwater>
+                    <hotwater>649</hotwater>
+                    <electricity>4597</electricity>
+                    <gas>246</gas>
+                </registration>
+                 <registration month="7" year="2016">
+                    <coldwater>598</coldwater>
+                    <hotwater>657</hotwater>
+                    <electricity>4737</electricity>
+                    <gas>280</gas>
+                </registration>
             </flat>
         </building>
 </housekeeper>
