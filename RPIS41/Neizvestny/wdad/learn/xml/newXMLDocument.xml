@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE housekeeper SYSTEM "housekeeper.dtd">
+<housekeeper>
+    <tariffs coldwater="0" hotwater="0" electricity="0" gas="0"/>
+        <building street="0" number="0" flatquantity="0">
+            <flat number="0" personquantity="0" area="0">
+                <registration month="0" year="0">
+                    <coldwater>0</coldwater>
+                    <hotwater>0</hotwater>
+                    <electricity>0</electricity>
+                    <gas></gas>
+                </registration> 
+            </flat>
+        </building>
+</housekeeper>
