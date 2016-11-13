@@ -3,7 +3,7 @@
 <!ELEMENT tariffs EMPTY>
 <!ELEMENT building (flat+)>
 <!ELEMENT flat (registration*)>
-<!ELEMENT registration(coldwater?, hotwater?, electricity?, gas?)>
+<!ELEMENT registration (coldwater?, hotwater?, electricity?, gas?)>
 <!ELEMENT coldwater (#PCDATA)>
 <!ELEMENT hotwater (#PCDATA)>
 <!ELEMENT electricity (#PCDATA)>
@@ -19,7 +19,7 @@
         flatsquantity CDATA #REQUIRED >
 <!ATTLIST flat 
         number CDATA #REQUIRED
-        personsquantity CDATA “0”
+        personsquantity CDATA "0"
         area CDATA #REQUIRED >
 <!ATTLIST registration
         month 
