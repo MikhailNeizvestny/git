@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE housekeeper SYSTEM "housekeeper.dtd">
 <housekeeper>
-    <tariffs coldwater="20" hotwater="45" electricity="23" gas="15"/>
-        <building street="Gastello" number="14" flatquantity="120">
-            <flat number="25" personquantity="3" area="30">
+    <tariffs coldwater="20" electricity="23" gas="15" hotwater="45"/>
+        <building flatquantity="120" number="14" street="Gastello">
+            <flat area="30" number="25" personquantity="3">
                 <registration month="5" year="2016">
                     <coldwater>240</coldwater>
                     <hotwater>150</hotwater>
@@ -23,7 +23,7 @@
                     <gas>445</gas>
                 </registration>
             </flat>
-            <flat number="48" personquantity="2" area="25">
+            <flat area="25" number="48" personquantity="2">
                 <registration month="6" year="2016">
                     <coldwater>589</coldwater>
                     <hotwater>649</hotwater>
@@ -37,7 +37,7 @@
                     <gas>280</gas>
                 </registration>
             </flat>
-            <flat number="49" personquantity="2" area="25">
+            <flat area="25" number="49" personquantity="2">
                 <registration month="5" year="2016">
                     <coldwater>579</coldwater>
                     <hotwater>649</hotwater>

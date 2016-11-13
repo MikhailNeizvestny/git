@@ -105,7 +105,7 @@ public class XmlTask {
         NodeList registrationList;
         NamedNodeMap registrationAttributes;
         Node lastReg, prevReg = null;
-        
+
         registrationList = flat.getElementsByTagName("registration");//получаем список показаний
         lastReg = registrationList.item(registrationList.getLength() - 1);//получим последнее показание
         //предыдущее показание
@@ -140,29 +140,34 @@ public class XmlTask {
         tariffAttr.getNamedItem(tariffName).setNodeValue(String.valueOf(newValue));
         updateDocument();
     }
+    
+    public void addRegistration(String street, int buildingNumber, int flatNumber,
+            int year, int month, double coldWater, double hotWater,
+            double electricity, double gas) throws IOException {
+        Element flat = getFlat(street, buildingNumber, flatNumber);
+        Node newRegistration = document.createElement("registration");
 
-    //int year, int month, double coldWater, double hotWater,
-    //        double electricity, double gas
-    public void addRegistration(String street, int buildingNumber, int flatNumber) throws IOException {
-        NodeList buildingList = document.getElementsByTagName("building");
-        NamedNodeMap buildingAttributes;
-        for (int i = 0; i < buildingList.getLength(); i++) {
-            buildingAttributes = buildingList.item(i).getAttributes();
-            if (buildingAttributes.getNamedItem("street").getNodeValue().equals(street)
-                    && Integer.valueOf(buildingAttributes.getNamedItem("number").getNodeValue()) == buildingNumber) {
-                NodeList flatList = ((Element) buildingList.item(i)).getElementsByTagName("flat");
-                //flatList = buildingList.item(i).getChildNodes(); //получаем список квартир
-                for (int j = 0; j < flatList.getLength(); j++) {
-                    NamedNodeMap flatAttributes = flatList.item(j).getAttributes();
-                    if (Integer.valueOf(flatAttributes.getNamedItem("number").getNodeValue()) == flatNumber)// находим квартиру
-                    {
-                        Element elem = document.createElement("registration");
-                        flatList.item(i).appendChild(elem);
-                    }
-                }
-            }
-        }
+        ((Element) newRegistration).setAttribute("year", String.valueOf(year));
+        ((Element) newRegistration).setAttribute("month", String.valueOf(month));
+
+        Node coldwaterElem = document.createElement("coldwater");
+        coldwaterElem.setTextContent(String.valueOf(coldWater));
+
+        Node hotwaterElem = document.createElement("hotwater");
+        hotwaterElem.setTextContent(String.valueOf(hotWater));
+
+        Node electricityElem = document.createElement("electricity");
+        electricityElem.setTextContent(String.valueOf(electricity));
+
+        Node gasElem = document.createElement("gas");
+        gasElem.setTextContent(String.valueOf(gas));
+
+        newRegistration.appendChild(coldwaterElem);
+        newRegistration.appendChild(hotwaterElem);
+        newRegistration.appendChild(electricityElem);
+        newRegistration.appendChild(gasElem);
+
+        flat.appendChild(newRegistration);
         updateDocument();
     }
-
 }
