@@ -102,15 +102,13 @@ public class XmlTask {
         double result = 0;
         Element flat = getFlat(street, buildingNumber, flatNumber);
         NodeList tariffs = document.getElementsByTagName("tariffs");
-        NodeList registrationList;
-        NamedNodeMap registrationAttributes;
         Node lastReg, prevReg = null;
 
-        registrationList = flat.getElementsByTagName("registration");//получаем список показаний
+        NodeList registrationList = flat.getElementsByTagName("registration");//получаем список показаний
         lastReg = registrationList.item(registrationList.getLength() - 1);//получим последнее показание
         //предыдущее показание
         for (int k = 0; k < registrationList.getLength(); k++) {
-            registrationAttributes = registrationList.item(k).getAttributes();
+            NamedNodeMap registrationAttributes = registrationList.item(k).getAttributes();
             if (Integer.valueOf(registrationAttributes.getNamedItem("month").getNodeValue())
                     == Integer.valueOf(lastReg.getAttributes().getNamedItem("month").getNodeValue()) - 1) {
                 prevReg = registrationList.item(k);

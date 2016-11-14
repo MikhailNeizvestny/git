@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE housekeeper SYSTEM "housekeeper.dtd">
 <housekeeper>
-    <tariffs coldwater="20" electricity="23" gas="15" hotwater="45"/>
-        <building flatquantity="120" number="14" street="Gastello">
-            <flat area="30" number="25" personquantity="3">
-                <registration month="5" year="2016">
-                    <coldwater>240</coldwater>
-                    <hotwater>150</hotwater>
-                    <electricity>587</electricity>
-                    <gas>378</gas>
-                </registration>
-                 <registration month="6" year="2016">
-                    <coldwater>248</coldwater>
-                    <hotwater>156</hotwater>
-                    <electricity>704</electricity>
-                    <gas>402</gas>
-                </registration>
-                <registration month="7" year="2016">
-                    <coldwater>254</coldwater>
-                    <hotwater>165</hotwater>
-                    <electricity>945</electricity>
-                    <gas>445</gas>
-                </registration>
-            </flat>
-            <flat area="25" number="48" personquantity="2">
-                <registration month="6" year="2016">
-                    <coldwater>589</coldwater>
-                    <hotwater>649</hotwater>
-                    <electricity>4597</electricity>
-                    <gas>246</gas>
-                </registration>
-                 <registration month="7" year="2016">
-                    <coldwater>598</coldwater>
-                    <hotwater>657</hotwater>
-                    <electricity>4737</electricity>
-                    <gas>280</gas>
-                </registration>
-            </flat>
-            <flat area="25" number="49" personquantity="2">
-                <registration month="5" year="2016">
-                    <coldwater>579</coldwater>
-                    <hotwater>649</hotwater>
-                    <electricity>4417</electricity>
-                    <gas>236</gas>
-                </registration>
-                 <registration month="6" year="2016">
-                    <coldwater>599</coldwater>
-                    <hotwater>670</hotwater>
-                    <electricity>4732</electricity>
-                    <gas>274</gas>
-                </registration>
-            </flat>
-        </building>
+    <tariffs coldwater="15.0" electricity="23" gas="15" hotwater="45"/>
+    <building flatquantity="120" number="14" street="Gastello">
+        <flat area="30" number="25" personquantity="3">
+            <registration month="5" year="2016">
+                <coldwater>240</coldwater>
+                <hotwater>150</hotwater>
+                <electricity>587</electricity>
+                <gas>378</gas>
+            </registration>
+            <registration month="6" year="2016">
+                <coldwater>248</coldwater>
+                <hotwater>156</hotwater>
+                <electricity>704</electricity>
+                <gas>402</gas>
+            </registration>
+            <registration month="7" year="2016">
+                <coldwater>254</coldwater>
+                <hotwater>165</hotwater>
+                <electricity>945</electricity>
+                <gas>445</gas>
+            </registration>
+        </flat>
+        <flat area="25" number="48" personquantity="2">
+            <registration month="6" year="2016">
+                <coldwater>589</coldwater>
+                <hotwater>649</hotwater>
+                <electricity>4597</electricity>
+                <gas>246</gas>
+            </registration>
+            <registration month="7" year="2016">
+                <coldwater>598</coldwater>
+                <hotwater>657</hotwater>
+                <electricity>4737</electricity>
+                <gas>280</gas>
+            </registration>
+        </flat>
+        <flat area="25" number="49" personquantity="2">
+            <registration month="5" year="2016">
+                <coldwater>579</coldwater>
+                <hotwater>649</hotwater>
+                <electricity>4417</electricity>
+                <gas>236</gas>
+            </registration>
+            <registration month="6" year="2016">
+                <coldwater>599</coldwater>
+                <hotwater>670</hotwater>
+                <electricity>4732</electricity>
+                <gas>274</gas>
+            </registration>
+        </flat>
+    </building>
 </housekeeper>
