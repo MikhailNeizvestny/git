@@ -26,6 +26,10 @@ public class Server {
     private static final String DATA_MANAGER_PATH = "RPIS41.Neizvestny.wdad.learn.rmi.XmlDataManagerImpl";
     private static final int DATA_MANAGER_PORT = 49100;
     public static void main(String[] args) {
+        System.setProperty("java.rmi.server.codebase", pm.getClassProvider());
+        System.setProperty("java.rmi.server.useCodebaseOnly", "true"); 
+        System.setProperty("java.rmi.server.logCalls", "true");
+        System.setProperty("java.security.policy", pm.getPolicyPath()); 
         try {
             pm = PreferencesManager.getInstance();
         } catch (ParserConfigurationException | IOException | SAXException e) {
