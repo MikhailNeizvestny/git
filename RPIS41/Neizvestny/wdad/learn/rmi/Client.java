@@ -46,20 +46,24 @@ public class Client
         {
             re.printStackTrace();
         }
-        if (registry != null) {
-            try {
+       /* if (registry != null) 
+        {
+            try 
+            {
                 XmlDataManager xdm = (XmlDataManager) registry.lookup(DATA_MANAGER_NAME);
-            } catch (NotBoundException nbe) {
+            } catch (NotBoundException nbe) 
+            {
                 System.err.println("Cant find object");
                 nbe.printStackTrace();
-            } catch (RemoteException re) {
+            } catch (RemoteException re) 
+            {
                 System.err.println("Cant execute RMI");
                 re.printStackTrace();
-            } catch (Exception e) {
+            } catch (Exception e) 
+            {
                 System.err.println("User input error");
                 e.printStackTrace();
             }
-        }
-}
+        }*/
     }
 }

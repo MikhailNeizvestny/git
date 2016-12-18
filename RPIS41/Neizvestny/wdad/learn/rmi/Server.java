@@ -59,11 +59,15 @@ public class Server {
                 XmlDataManagerImpl manager = new XmlDataManagerImpl();
                 UnicastRemoteObject.exportObject(manager, DATA_MANAGER_PORT);
                 registry.rebind(DATA_MANAGER_NAME, manager);
-                //Addbinded
+                pm.addBindedObject(DATA_MANAGER_NAME, DATA_MANAGER_PATH);
                 System.out.println("idl-ing");
-            } catch (RemoteException re) {
-                System.err.println("cant export or bind object");
+            } catch (RemoteException re) 
+            {
                 re.printStackTrace();
+            }
+            catch (IOException ioe) 
+            {
+                ioe.printStackTrace();
             }
         }
 

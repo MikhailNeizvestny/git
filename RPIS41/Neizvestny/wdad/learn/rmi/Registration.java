@@ -12,10 +12,10 @@ import java.util.Date;
  */
 public class Registration {
     Date date;
-    double coldwater;
-    double hotwater;
-    double electricity;
-    double gas;
+    private double coldwater;
+    private double hotwater;
+    private double electricity;
+    private double gas;
     
     public Registration(Date date, double coldwater, double hotwater, double electricity, double gas)
     {
@@ -24,6 +24,36 @@ public class Registration {
         this.hotwater = hotwater;
         this.electricity = electricity;
         this.gas = gas;
+    }
+    
+    public double getColdwater()
+    {
+        return coldwater;
+    }
+    
+    public double getHotwater()
+    {
+        return hotwater;
+    }
+    
+    public double getElectricity()
+    {
+        return electricity;
+    }
+    
+    public double getGas()
+    {
+        return gas;
+    }
+    
+    public int getMonth()
+    {
+        return date.getMonth();
+    }
+    
+    public int getYear()
+    {
+        return date.getYear();
     }
     
 }

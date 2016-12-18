@@ -7,7 +7,6 @@ package RPIS41.Neizvestny.wdad.learn.rmi;
 
 import RPIS41.Neizvestny.wdad.learn.xml.XmlTask;
 import java.io.IOException;
-import java.time.Instant;
 import org.w3c.dom.*;
 
 import java.util.Date;
@@ -76,6 +75,8 @@ public class XmlDataManagerImpl implements XmlDataManager{
     @Override
     public void addRegistration (Building building, int flatNumber, Registration registration) throws IOException
     {
-        xmltask.addRegistration(building.getStreet(), building.getNumber(), flatNumber, flatNumber, flatNumber, flatNumber, flatNumber, flatNumber, flatNumber);
+        xmltask.addRegistration(building.getStreet(), building.getNumber(), flatNumber,
+                registration.getYear(), registration.getMonth(), registration.getColdwater(),
+                registration.getHotwater(), registration.getElectricity(), registration.getGas());
     }
 }
