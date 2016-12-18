@@ -15,8 +15,8 @@ import java.io.Serializable;
  */
 public interface XmlDataManager extends Remote, Serializable 
 {
-    public double getBill(Building building, int flatNumber);
-    public Flat getFlat (Building building, int flatNumber);
-    public  void  setTariff  (String tariffName,  double  newValue) throws IOException;
-    public void addRegistration (Building building, int flatNumber, Registration registration) throws IOException;
+    public double getBill(Building building, int flatNumber) throws RemoteException;
+    public Flat getFlat (Building building, int flatNumber) throws RemoteException;
+    public  void  setTariff  (String tariffName,  double  newValue) throws IOException, RemoteException;
+    public void addRegistration (Building building, int flatNumber, Registration registration) throws IOException, RemoteException;
 }
