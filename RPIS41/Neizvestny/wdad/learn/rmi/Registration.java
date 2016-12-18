@@ -16,4 +16,14 @@ public class Registration {
     double hotwater;
     double electricity;
     double gas;
+    
+    public Registration(Date date, double coldwater, double hotwater, double electricity, double gas)
+    {
+        this.date = date;
+        this.coldwater = coldwater;
+        this.hotwater = hotwater;
+        this.electricity = electricity;
+        this.gas = gas;
+    }
+    
 }

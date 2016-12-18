@@ -15,4 +15,12 @@ public class Flat {
     int personsQuantity;
     double area;
     List<Registration> registration;
+    
+    public Flat (int number, int personsQuantity, double area, List<Registration> registration)
+    {
+        this.area = area;
+        this.number = number;
+        this.personsQuantity = personsQuantity;
+        this.registration = registration;
+    }
 }

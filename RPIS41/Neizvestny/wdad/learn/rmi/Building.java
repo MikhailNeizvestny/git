@@ -11,9 +11,9 @@ package RPIS41.Neizvestny.wdad.learn.rmi;
  */
 public class Building {
     private String street;
-    private String number;
+    private int number;
     
-    public Building(String street, String number)
+    public Building(String street, int number)
     {
         this.number = number;
         this.street = street;
@@ -24,7 +24,7 @@ public class Building {
         return street;
     }
     
-    public String getNumber()
+    public int getNumber()
     {
         return number;
     }

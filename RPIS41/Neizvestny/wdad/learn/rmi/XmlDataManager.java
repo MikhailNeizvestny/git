@@ -5,6 +5,7 @@
  */
 package RPIS41.Neizvestny.wdad.learn.rmi;
 
+import java.io.IOException;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.io.Serializable;
@@ -15,7 +16,7 @@ import java.io.Serializable;
 public interface XmlDataManager extends Remote, Serializable 
 {
     public double getBill(Building building, int flatNumber);
-    public double getFlat (Building building, int flatNumber);
-    public  void  setTariff  (String tariffName,  double  newValue);
-    public void addRegistration (Building building, int flatNumber, Registration registration);
+    public Flat getFlat (Building building, int flatNumber);
+    public  void  setTariff  (String tariffName,  double  newValue) throws IOException;
+    public void addRegistration (Building building, int flatNumber, Registration registration) throws IOException;
 }

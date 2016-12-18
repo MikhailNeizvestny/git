@@ -20,13 +20,18 @@ public class XmlTask {
     private String path;
 
     public XmlTask(String path)
-            throws ParserConfigurationException, IOException, SAXException {
-        this.path = path;
-        createDocument();
+    {
+        try 
+        {
+            createDocument();
+        } catch (ParserConfigurationException | IOException | SAXException ex) 
+        {
+            ex.printStackTrace();
+        }
     }
 
     public XmlTask()
-            throws ParserConfigurationException, IOException, SAXException {
+    {
         this("src/RPIS41/Neizvestny/wdad/learn/xml/newXMLDocument.xml");
     }
 
@@ -85,7 +90,7 @@ public class XmlTask {
         return building;
     }
 
-    private Element getFlat(String street, int buildingNumber, int flatNumber) {
+    public Element getFlat(String street, int buildingNumber, int flatNumber) {
         Element flat = null;
         NodeList flatList = getBuilding(street, buildingNumber).getElementsByTagName("flat");
         for (int j = 0; j < flatList.getLength(); j++) {
