@@ -21,6 +21,7 @@ public class XmlTask {
 
     public XmlTask(String path)
     {
+        this.path = path;
         try 
         {
             createDocument();

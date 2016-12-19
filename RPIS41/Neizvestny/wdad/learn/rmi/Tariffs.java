@@ -6,11 +6,12 @@
 package RPIS41.Neizvestny.wdad.learn.rmi;
 
 import java.util.*;
+import java.io.Serializable;
 /**
  *
  * @author Cyfralus
  */
-public class Tariffs {
+public class Tariffs implements Serializable{
     static final HashMap<String, Double> values = new HashMap<>();
     static final String COLDWATER_KEY = "coldwater";
     static final String HOTWATER_KEY = "hotwater";

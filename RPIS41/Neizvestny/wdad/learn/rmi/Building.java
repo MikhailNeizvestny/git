@@ -5,11 +5,12 @@
  */
 package RPIS41.Neizvestny.wdad.learn.rmi;
 
+import java.io.Serializable;
 /**
  *
  * @author Cyfralus
  */
-public class Building {
+public class Building implements Serializable {
     private String street;
     private int number;
     

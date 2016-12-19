@@ -6,15 +6,16 @@
 package RPIS41.Neizvestny.wdad.learn.rmi;
 
 import java.util.List;
+import java.io.Serializable;
 /**
  *
  * @author Cyfralus
  */
-public class Flat {
-    int number;
-    int personsQuantity;
-    double area;
-    List<Registration> registration;
+public class Flat implements Serializable {
+    private int number;
+    private int personsQuantity;
+    private double area;
+    private List<Registration> registration;
     
     public Flat (int number, int personsQuantity, double area, List<Registration> registration)
     {
@@ -22,5 +23,25 @@ public class Flat {
         this.number = number;
         this.personsQuantity = personsQuantity;
         this.registration = registration;
+    }
+    
+    public int getNumber()
+    {
+        return number;
+    }
+    
+    public int getPersonsQuantity()
+    {
+        return personsQuantity;
+    }
+    
+    public double getArea()
+    {
+        return area;
+    }
+    
+    public List<Registration> getRegistration()
+    {
+        return registration;
     }
 }

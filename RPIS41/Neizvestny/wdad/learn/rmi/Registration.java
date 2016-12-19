@@ -6,11 +6,12 @@
 package RPIS41.Neizvestny.wdad.learn.rmi;
 
 import java.util.Date;
+import java.io.Serializable;
 /**
  *
  * @author Cyfralus
  */
-public class Registration {
+public class Registration implements Serializable{
     Date date;
     private double coldwater;
     private double hotwater;

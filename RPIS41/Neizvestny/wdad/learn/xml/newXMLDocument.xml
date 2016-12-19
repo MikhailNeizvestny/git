@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE housekeeper SYSTEM "housekeeper.dtd">
 <housekeeper>
-    <tariffs coldwater="15.0" electricity="23" gas="15" hotwater="45"/>
+    <tariffs coldwater="14.0" electricity="23" gas="15" hotwater="45"/>
     <building flatquantity="120" number="14" street="Gastello">
         <flat area="30" number="25" personquantity="3">
             <registration month="5" year="2016">
